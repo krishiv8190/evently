@@ -39,6 +39,14 @@ export async function POST(req: Request) {
 
   // Verify the payload with the headers
   try {
+    console.log('Headers:', {
+      'svix-id': svix_id,
+      'svix-timestamp': svix_timestamp,
+      'svix-signature': svix_signature,
+    });
+    
+    console.log('Payload:', body);
+
     evt = wh.verify(body, {
       'svix-id': svix_id,
       'svix-timestamp': svix_timestamp,
@@ -63,8 +71,8 @@ export async function POST(req: Request) {
       clerkId: id,
       email: email_addresses[0].email_address,
       username: username!,
-      firstName: first_name,
-      lastName: last_name,
+      // firstName: first_name,
+      // lastName: last_name,
       photo: image_url,
     }
 
