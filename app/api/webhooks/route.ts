@@ -43,9 +43,9 @@ export async function POST(req: Request) {
       'svix-id': svix_id,
       'svix-timestamp': svix_timestamp,
       'svix-signature': svix_signature,
-    });
-    
-    console.log('Payload:', body);
+    })
+
+    console.log('Payload:', body)
 
     evt = wh.verify(body, {
       'svix-id': svix_id,

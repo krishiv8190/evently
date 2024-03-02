@@ -19,6 +19,11 @@ export const createEvent = async ({
       throw new Error('User not found')
     }
 
+    console.log({
+      categoryId: event.categoryId,
+      organizer: userId,
+    })
+
     const newEvent = await Event.create({
       ...event,
       category: event.categoryId,
