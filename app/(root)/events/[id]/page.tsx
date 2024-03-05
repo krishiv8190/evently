@@ -94,7 +94,7 @@ const EventDetails = async ({
         </div>
       </section>
 
-      <section className="wrapper my-8 flex flex-col fap-8 md:gap-12">
+      <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold">Related Events</h2>
 
         <Collection
